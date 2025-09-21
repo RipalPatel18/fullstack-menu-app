@@ -1,0 +1,10 @@
+extends layout
+
+block layout-content
+  h2 Welcome to #{title} page
+  if menu.length
+    nav
+      ul
+        each link in menu
+          li
+            a(href=link.path) #{link.name}

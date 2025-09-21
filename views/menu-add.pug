@@ -1,0 +1,16 @@
+extends layout
+
+block layout-content
+  h2 Add Menu Link
+  form(action="/admin/menu/add/submit" method="POST")
+    div
+      label(for="name") Name:
+      input(type="text" name="name" id="name" required)
+    div
+      label(for="path") Path:
+      input(type="text" name="path" id="path" required)
+    div
+      label(for="weight") Weight:
+      input(type="number" name="weight" id="weight" required)
+    div
+      button(type="submit") Add Link

@@ -1,0 +1,20 @@
+extends layout
+
+block layout-content
+  h2 Menu Admin
+  a(href="/admin/menu/add") Add New Link
+
+  table
+    tr
+      th Name
+      th Path
+      th Weight
+      th Actions
+    each link in menu
+      tr
+        td= link.name
+        td= link.path
+        td= link.weight
+        td
+          a(href=`/admin/menu/edit?linkId=${link._id}`) Edit |
+          a(href=`/admin/menu/delete?linkId=${link._id}`) Delete
